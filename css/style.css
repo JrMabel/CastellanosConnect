@@ -11,14 +11,13 @@ body {
     color: #1e2a3e;
     line-height: 1.5;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
-    overflow-x: hidden;
-    width: 100%;
 }
 
 /* HEADER */
@@ -28,6 +27,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .header-container {
@@ -35,6 +35,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* LOGO MEJORADO - MÁS VISIBLE */
@@ -244,8 +246,6 @@ body {
     opacity: 0.85;
     animation: float 3s ease-in-out infinite;
     filter: drop-shadow(0 8px 16px rgba(15,103,179,0.15));
-    max-width: 100%;
-    height: auto;
 }
 
 @keyframes float {
@@ -397,8 +397,6 @@ body {
     color: #0f67b3;
     opacity: 0.7;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.05));
-    max-width: 100%;
-    height: auto;
 }
 
 /* CONTACT */
@@ -764,33 +762,9 @@ a, button, .service-card, .btn {
     transition: all 0.2s ease;
 }
 
-/* ========== CORRECCIONES ADICIONALES PARA MÓVIL ========== */
+/* ========== RESPONSIVE - CORREGIDO SIN SCROLL EXCESIVO ========== */
 
-/* Evitar que imágenes o iconos se salgan en móvil */
-img, .hero-image i, .about-image i {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Mejorar el touch en móvil */
-@media (max-width: 900px) {
-    .nav-link, .dropdown-btn, .mobile-menu-btn, .btn, .service-card, .dropdown-item {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-    }
-    
-    /* Aumentar área de clic en móvil */
-    .mobile-nav-link {
-        padding: 14px 0;
-        font-size: 1.1rem;
-    }
-    
-    .dropdown-btn {
-        padding: 10px 14px;
-    }
-}
-
-/* Ajustes para tablets y móviles grandes */
+/* Tablets y móviles grandes */
 @media (max-width: 900px) {
     .nav-desktop {
         display: none;
@@ -830,10 +804,18 @@ img, .hero-image i, .about-image i {
     }
 }
 
-/* Ajustes para móviles */
+/* Móviles */
 @media (max-width: 768px) {
-    body {
-        font-size: 15px;
+    .container {
+        padding: 0 20px;
+    }
+    
+    .header-container {
+        padding: 0.8rem 20px;
+    }
+    
+    .hero {
+        padding: 50px 0;
     }
     
     .hero-content h1 {
@@ -854,6 +836,18 @@ img, .hero-image i, .about-image i {
     
     .section-header h2 {
         font-size: 1.6rem;
+    }
+    
+    .services {
+        padding: 50px 0;
+    }
+    
+    .about {
+        padding: 50px 0;
+    }
+    
+    .contact {
+        padding: 50px 0;
     }
     
     .service-card h3 {
@@ -884,18 +878,14 @@ img, .hero-image i, .about-image i {
     }
 }
 
-/* Ajustes para pantallas muy pequeñas (iPhone SE, etc) */
+/* Móviles pequeños (iPhone SE, etc) */
 @media (max-width: 480px) {
     .container {
         padding: 0 16px;
     }
     
     .header-container {
-        padding: 0.8rem 16px;
-    }
-    
-    .hero {
-        padding: 50px 0;
+        padding: 0.6rem 16px;
     }
     
     .hero-content h1 {
@@ -912,35 +902,45 @@ img, .hero-image i, .about-image i {
     }
     
     .chatbot-widget {
-        width: 90vw;
-        right: -5vw;
+        width: calc(100vw - 40px);
+        right: -10px;
     }
     
     .chatbot-messages {
         height: 250px;
     }
-}
-
-/* Ajustes específicos para móviles muy pequeños */
-@media (max-width: 600px) {
+    
+    .logo span {
+        font-size: 1.1rem;
+    }
+    
+    .logo-img {
+        height: 32px;
+    }
+    
+    .dropdown-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
     }
-    .logo-img {
-        height: 35px;
+}
+
+/* Mejorar experiencia táctil en móviles */
+@media (max-width: 900px) {
+    .nav-link, .dropdown-btn, .mobile-menu-btn, .btn, .service-card, .dropdown-item {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
+    
+    .mobile-nav-link {
+        padding: 14px 0;
+        font-size: 1.1rem;
+    }
+    
     .dropdown-btn {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-    .chatbot-widget {
-        width: 300px;
-        right: -20px;
-    }
-    .chatbot-messages {
-        height: 280px;
-    }
-    .logo span {
-        font-size: 1.2rem;
+        padding: 10px 14px;
     }
 }
