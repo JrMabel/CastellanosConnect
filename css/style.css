@@ -944,3 +944,46 @@ a, button, .service-card, .btn {
         padding: 10px 14px;
     }
 }
+
+/* ========== CORRECCIÓN DROPDOWN EN MÓVIL ========== */
+@media (max-width: 768px) {
+    .language-dropdown {
+        position: static;
+    }
+    
+    .dropdown-menu {
+        position: fixed;
+        top: auto;
+        bottom: 80px;
+        right: 20px;
+        left: auto;
+        width: 200px;
+        max-width: calc(100vw - 40px);
+        z-index: 2000;
+    }
+    
+    .dropdown-menu.show {
+        display: block;
+    }
+    
+    /* Ajustar el botón del dropdown */
+    .dropdown-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Para móviles muy pequeños, mejor aún */
+@media (max-width: 480px) {
+    .dropdown-menu {
+        position: fixed;
+        bottom: 70px;
+        right: 16px;
+        width: 180px;
+    }
+    
+    .dropdown-item {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+}
