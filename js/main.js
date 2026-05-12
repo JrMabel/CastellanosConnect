@@ -203,11 +203,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function getBotResponse(msg, lang) {
         const lowerMsg = msg.toLowerCase();
         const responses = {
-            de: { greeting: 'Hallo! Wie können wir helfen?', price: 'Preise sind individuell. Kontaktieren Sie uns für ein Angebot.', service: 'Wir bieten Reinigung, Hauswartung & mehr.', contact: 'info@baselconnect.ch oder +41 61 123 45 67', default: 'Danke! Unser Team meldet sich. Oder schreiben Sie uns: info@baselconnect.ch' },
-            en: { greeting: 'Hello! How can we help?', price: 'Prices are tailored. Contact us for a quote.', service: 'We offer cleaning, facility & admin support.', contact: 'info@baselconnect.ch or +41 61 123 45 67', default: 'Thanks! Our team will reply. Email: info@baselconnect.ch' },
-            fr: { greeting: 'Bonjour! Comment vous aider?', price: 'Prix sur mesure. Contactez-nous.', service: 'Nettoyage, entretien, support admin.', contact: 'info@baselconnect.ch ou +41 61 123 45 67', default: 'Merci! Notre équipe vous répondra. Email: info@baselconnect.ch' },
-            it: { greeting: 'Ciao! Come possiamo aiutarti?', price: 'Prezzi personalizzati. Contattaci.', service: 'Pulizie, manutenzione, supporto admin.', contact: 'info@baselconnect.ch o +41 61 123 45 67', default: 'Grazie! Ti risponderemo. Email: info@baselconnect.ch' },
-            es: { greeting: '¡Hola! ¿Cómo ayudarle?', price: 'Precios a medida. Contáctenos.', service: 'Limpieza, mantenimiento, apoyo administrativo.', contact: 'info@baselconnect.ch o +41 61 123 45 67', default: '¡Gracias! Le responderemos. Email: info@baselconnect.ch' }
+            de: { greeting: 'Hallo! Wie können wir helfen?', price: 'Preise sind individuell. Kontaktieren Sie uns für ein Angebot.', service: 'Wir bieten Reinigung, Hauswartung & mehr.', contact: 'info@CastellanosConnect.ch oder +41 61 123 45 67', default: 'Danke! Unser Team meldet sich. Oder schreiben Sie uns: info@CastellanosConnect.ch' },
+            en: { greeting: 'Hello! How can we help?', price: 'Prices are tailored. Contact us for a quote.', service: 'We offer cleaning, facility & admin support.', contact: 'info@CastellanosConnect.ch or +41 61 123 45 67', default: 'Thanks! Our team will reply. Email: info@CastellanosConnect.ch' },
+            fr: { greeting: 'Bonjour! Comment vous aider?', price: 'Prix sur mesure. Contactez-nous.', service: 'Nettoyage, entretien, support admin.', contact: 'info@CastellanosConnect.ch ou +41 61 123 45 67', default: 'Merci! Notre équipe vous répondra. Email: info@CastellanosConnect.ch' },
+            it: { greeting: 'Ciao! Come possiamo aiutarti?', price: 'Prezzi personalizzati. Contattaci.', service: 'Pulizie, manutenzione, supporto admin.', contact: 'info@CastellanosConnect.ch o +41 61 123 45 67', default: 'Grazie! Ti risponderemo. Email: info@CastellanosConnect.ch' },
+            es: { greeting: '¡Hola! ¿Cómo ayudarle?', price: 'Precios a medida. Contáctenos.', service: 'Limpieza, mantenimiento, apoyo administrativo.', contact: 'info@CastellanosConnect.ch o +41 61 123 45 67', default: '¡Gracias! Le responderemos. Email: info@CastellanosConnect.ch' }
         };
         const r = responses[lang] || responses.de;
         if (lowerMsg.includes('hall') || lowerMsg.includes('hola') || lowerMsg.includes('hello')) return r.greeting;
@@ -256,5 +256,5 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
     
-    console.log('BaselConnect - Versión dinámica cargada ✅');
+    console.log('CastellanosConnect - Versión dinámica cargada ✅');
 });
